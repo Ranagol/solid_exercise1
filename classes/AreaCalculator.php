@@ -8,12 +8,12 @@ class AreaCalculator {
     }
 
     public function sum(){
+        $sumOfAreas = 0;
         foreach ($this->shapes as $shape) {
-            # code...
+           $sumOfAreas += $shape->area();
         }
+        return $sumOfAreas;
     }
 
-    public function output(){
-        return "Sum of the areas of provided shapes: " . $this->sum();
-    }
+
 }

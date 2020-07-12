@@ -1,5 +1,7 @@
 <?php
 
+//https://scotch.io/bar-talk/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
+
 spl_autoload_register('myAutoloader');
 function myAutoloader($className){
     include 'classes/' . $className . '.php';
@@ -11,7 +13,8 @@ $shapes = [
     new Square(6)
 ];
 
-var_dump($shapes);
+$areaCalculator = new AreaCalculator($shapes);
+echo $areaCalculator->sum();
 
 
 
